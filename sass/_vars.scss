@@ -1,0 +1,9 @@
+$small-col: 30px;
+$big-col: 70px;
+$site-width: 13 * $small-col + 12 * $big-col;
+
+@mixin container {
+    width: $site-width;
+    margin-left: auto;
+    margin-right: auto;
+}
