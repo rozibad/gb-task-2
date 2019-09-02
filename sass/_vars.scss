@@ -7,3 +7,9 @@ $site-width: 13 * $small-col + 12 * $big-col;
     margin-left: auto;
     margin-right: auto;
 }
+
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-sand: #c7b299;
+$color-sand-dark: darken($color-sand, 10%);

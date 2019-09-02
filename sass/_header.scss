@@ -1,7 +1,134 @@
 @import "vars";
 
 .header {
-    &_menu {
-        @include container;
+  background-color: #555;
+  min-height: 1024px;
+  background-image: url(../img/header_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 50% 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+
+  &_menu {
+    @include container;
+    display: flex;
+    align-items: center;
+    padding: 0 $small-col;
+    box-sizing: border-box;
+
+    &_links {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
     }
+
+    &_logo {
+      margin-right: auto;
+      fill: $color-white;
+
+      > svg {
+        display: inline-block;
+        width: 181px;
+        height: 56px;
+      }
+
+      &:hover {
+        fill: $color-sand;
+      }
+
+      &:active {
+        fill: $color-sand-dark;
+      }
+    }
+
+    &_link {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 14px;
+      font-weight: 200;
+      color: $color-white;
+      text-decoration: none;
+      margin: 0 15px;
+
+      &:hover {
+        color: $color-sand;
+      }
+
+      &:active {
+        color: $color-sand-dark;
+      }
+    }
+
+    &_cart {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      margin-left: 48px;
+      fill: $color-white;
+      cursor: pointer;
+
+      > svg {
+        display: inline-block;
+        width: 18px;
+        height: 24px;
+      }
+
+      &:hover {
+        fill: $color-sand;
+      }
+
+      &:active {
+        fill: $color-sand-dark;
+      }
+    }
+
+    &_search {
+      display: flex;
+      margin-left: 26px;
+
+      > label {
+        fill: $color-white;
+        cursor: pointer;
+
+        > svg {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+        }
+
+        &:hover {
+          fill: $color-sand;
+        }
+
+        &:active {
+          fill: $color-sand-dark;
+        }
+      }
+    }
+
+    &_search > input[type="search"] {
+      display: inline-block;
+      border: 0;
+      outline: none;
+      box-sizing: border-box;
+      height: 24px;
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 14px;
+      font-weight: 200;
+      color: $color-black;
+      background-color: $color-white;
+      width: 0;
+      transition: width 200ms ease;
+      opacity: 0;
+
+      &:focus {
+        width: 150px;
+        margin-left: 10px;
+        padding: 5px;
+        opacity: 1;
+      }
+    }
+  }
 }
