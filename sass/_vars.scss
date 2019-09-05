@@ -1,6 +1,7 @@
 $small-col: 30px;
 $big-col: 70px;
 $site-width: 13 * $small-col + 12 * $big-col;
+$font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 @mixin container {
     width: $site-width;
